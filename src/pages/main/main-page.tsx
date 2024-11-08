@@ -1,16 +1,7 @@
-// import {useState} from "react";
-//
-// function MainPage() {
-//   return (
-//     <div className="main">Путин - хуйло</div>
-//   )
-// }
-//
-// export default MainPage;
-
 import {useState} from 'react';
 import AddTodo from '/src/components/add-todo';
-import TaskList from '/src/components/task-list'
+import TaskList from '/src/components/task-list';
+import Study from "@components/study";
 
 let nextId = 3;
 const initialTodos = [
@@ -59,6 +50,7 @@ export default function TaskApp() {
         onChangeTodo={handleChangeTodo}
         onDeleteTodo={handleDeleteTodo}
       />
+      <Study/>
     </>
   );
 
