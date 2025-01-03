@@ -1,19 +1,14 @@
-import style from './study.module.scss';
+// import {style} from './study.module.scss'
+import styles from './study.module.scss'
 
 export default function Study() {
-
-
-  const clickHandler = (evt) => {
-    setTimeout(() => {
-      evt.target.style.backgroundColor = 'black';
-    }, 2000)
-  }
-
   return (
-    <div className={style.study}>
-      <div className={style.study__output} onClick={clickHandler}></div>
+    <div>
+      <div className={styles.study}>Hello world</div>
+      <div className={styles.study__output}></div>
     </div>
   );
 
 }
+
 
