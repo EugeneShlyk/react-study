@@ -1,10 +1,9 @@
-import Study from "@components/study";
+import List from "@components/study";
 
-export default function TaskApp() {
-
+export default function MainPage() {
   return (
     <>
-      <Study/>
+      <List category='Fruits'/>
     </>
   );
 

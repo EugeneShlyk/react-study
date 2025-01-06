@@ -1,1 +1,1 @@
-export { default } from './study';
+export { default } from './list';

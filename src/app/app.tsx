@@ -1,8 +1,10 @@
 
-
+import MainPage from "@pages/main";
 import {PRODUCTS} from "../mock";
 
 export default function App() {
-  return <span>hello</span>;
+  return (
+    <MainPage ></MainPage>
+  )
 }
 

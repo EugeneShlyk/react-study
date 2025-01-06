@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background-color: aqua;
+}
+
+.study__category {
+  grid-column: span 2;
+}
+
+
+
