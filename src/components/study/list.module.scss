@@ -5,8 +5,14 @@
   background-color: aqua;
 }
 
-.study__category {
-  grid-column: span 2;
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.list__title {
+  color: darkmagenta;
 }
 
 

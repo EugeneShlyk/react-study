@@ -23,6 +23,7 @@ export const PRODUCTS = [
     stocked: true,
     name: 'Spinach',
   },
+
   {
     category: 'Vegetables',
     price: '$4',
@@ -34,5 +35,11 @@ export const PRODUCTS = [
     price: '$1',
     stocked: true,
     name: 'Peas',
+  },
+  {
+    category: 'Drink',
+    price: '$5',
+    stocked: true,
+    name: 'Coffee',
   },
 ];
