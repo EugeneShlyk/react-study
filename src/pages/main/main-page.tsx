@@ -1,10 +1,12 @@
 import Box from "@components/study";
 import {PRODUCTS} from "../../mock";
+import MyComponent from "@components/my-component/my-component";
 
 export default function MainPage() {
   return (
     <>
-      <Box products={PRODUCTS}/>
+      {/*<Box products={PRODUCTS}/>*/}
+      <MyComponent/>
     </>
   );
 
