@@ -1,37 +1,21 @@
 import {useRef} from "react";
-
-// export default function MyComponent() {
-//   const inputRef = useRef(null);
-//
-//   const focusInput = () => {
-//     inputRef.current.focus();
-//   };
-//
-//   return (
-//     <>
-//       <input ref={inputRef} type="text" />
-//       <button onClick={focusInput}>Focus Input</button>
-//     </>
-//   );
-// }
+import styles from './my-component.module.scss'
 
 export default function MyComponent() {
-  const timerRef = useRef(0);
+  const inputRef = useRef(null);
+  const outputRef = useRef(null);
+  const output = document.querySelector('.my-component__output');
 
-  const startTimer = () => {
-    timerRef.current = setInterval(() => {
-      console.log('Timer running');
-    }, 1000);
-  };
-
-  const stopTimer = () => {
-    clearInterval(timerRef.current);
-  };
+  function handleChange() {
+    outputRef.current.textContent = inputRef.current.value;
+  }
 
   return (
     <>
-      <button onClick={startTimer}>Start Timer</button>
-      <button onClick={stopTimer}>Stop Timer</button>
+      <h2>Hello</h2>
+      <input onChange={handleChange} ref={inputRef} type="text"/>
+      <div ref={outputRef} className={styles['my-component__output']}></div>
     </>
   );
 }
+
