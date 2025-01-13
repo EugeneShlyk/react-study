@@ -1,10 +1,9 @@
 import {useRef} from "react";
 import styles from './my-component.module.scss'
 
-export default function MyComponent() {
+export default function MyComponent({products}) {
   const inputRef = useRef(null);
   const outputRef = useRef(null);
-  const output = document.querySelector('.my-component__output');
 
   function handleChange() {
     outputRef.current.textContent = inputRef.current.value;
@@ -14,7 +13,8 @@ export default function MyComponent() {
     <>
       <h2>Hello</h2>
       <input onChange={handleChange} ref={inputRef} type="text"/>
-      <div ref={outputRef} className={styles['my-component__output']}></div>
+      <h1 ref={outputRef} className={styles['my-component__output']}></h1>
+      {products && products.map(product => <span style={{ padding: '20px' }}>{product.name}</span>)}
     </>
   );
 }
