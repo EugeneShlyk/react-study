@@ -1,18 +1,20 @@
-type point = {
+import styles from './list.module.scss'
+
+type pointType = {
   title: string,
   lat: number,
   lng: number,
 }
 
 type pointsProps = {
-  points: point[]
+  points: pointType[]
 }
 
 
 export default function ({points}: pointsProps) {
   return (
-    <ul>
-      {points.map((point: point, index) => {
+    <ul className={styles.list}>
+      {points.map((point: pointType, index) => {
         const keyValue = `${index}-${point.title}`;
 
         return (
