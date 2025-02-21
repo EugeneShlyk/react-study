@@ -1,6 +1,6 @@
 import styles from './map.module.scss';
 import {useRef} from "react";
-import useMap from "../../hoooks/useMap.tsx";
+import useMap from "../../hoooks/use-map/use-map.tsx";
 
 type CityProp = {
   title: string;

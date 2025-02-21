@@ -1,4 +1,6 @@
 import {useEffect, useState, useRef, Ref} from "react";
+// import * as L from 'leaflet';
+// @import '../node_modules/leaflet/dist/leaflet.css';
 
 type cityProp = {
   title: string,
@@ -9,7 +11,7 @@ type cityProp = {
 
 function useMap(mapRef: Ref<HTMLDivElement>, city: cityProp) {
   const [map, setMap] = useState(null);
-  const isRenderedRef = useRef<HTMLDivElement>(false);
+  const isRenderedRef = useRef<boolean>(false);
 
   useEffect(() => {
     if (mapRef.current !== null && !isRenderedRef.current) {
