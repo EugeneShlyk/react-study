@@ -1,6 +1,5 @@
 import styles from './map.module.scss';
 import {useRef} from "react";
-import useMap from "../../hoooks/use-map/use-map.tsx";
 
 type CityProp = {
   title: string;
@@ -16,7 +15,6 @@ interface MapProps {
 
 export default function ({city}: MapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
-  const map = useMap(mapRef, city);
 
   return (
     <div
