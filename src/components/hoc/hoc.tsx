@@ -31,5 +31,5 @@ function DogImages(props) {
 
 export default withLoader(
   DogImages,
-  "https://dog.ceo/api/breed/labrador/images/random/6"
+  "https://dog.ceo/api/breed/greyhound/images/random/6"
 );
