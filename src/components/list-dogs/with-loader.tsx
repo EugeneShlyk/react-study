@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-function withLoader(Element, url) {
+export default function withLoader(Element, url) {
   return (props) => {
-    // console.log(props)
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -18,18 +17,9 @@ function withLoader(Element, url) {
     if (!data) {
       return <div>Loading...</div>;
     }
+
     return <Element {...props} data={data} />;
   };
 }
 
-function DogImages(props) {
-  console.log(props)
-  return props.data.message.map((dog, index) => (
-    <img src={dog} alt="Dog" key={index} />
-  ));
-}
 
-export default withLoader(
-  DogImages,
-  "https://dog.ceo/api/breed/greyhound/images/random/6"
-);
